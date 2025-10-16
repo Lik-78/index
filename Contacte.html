@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>AGROVITA GROUP — Cultivons la vie, nourrissons l'avenir</title>
+  <meta name="description" content="AGROVITA GROUP - Agriculture, Apiculture, Élevage, Agroalimentaire, Environnement et Santé. Solutions durables pour les communautés africaines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="CSS/Style AgroVita .css">
+    </head>
+    <body>
+        <header>
+            <div class="container nav">
+      <div class="brand">
+        <div class="logo"><a href="index.html" class="lien">AV</a></div>
+        <div>
+          <div style="font-weight:700">AGROVITA GROUP</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.9)" data-fr="Cultivons la vie, nourrissons l’avenir" data-en="Cultivating life, nurturing the future">Cultivons la vie, nourrissons l'avenir</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center">
+        <nav>
+          <a href="Propos.html" data-fr="À propos" data-en="About" >À propos</a>
+          <a href="Activité.html" data-fr="Activités" data-en="Activities" >Activités</a>
+          <a href="Projets.html" data-fr="Projets" data-en="Projects">Projets</a>
+          <a href="Actualite.html" data-fr="Actualité" data-en="Actuality">Actualités</a>
+          <a href="Contacte.html" data-fr="Contact" data-en="Contact" class="cta">Contact</a>
+        </nav>
+        <button class="menu" aria-label="menu" onclick="toggleMenu()" style="margin-left:12px;border:0;background:transparent;color:white">☰</button>
+        <button class="lang-switch" onclick="toggleLang()">EN</button>
+      </div>
+    </div>
+        </header><br>
+        <section id="contact">
+      <h2>Contact & Partenariats</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+        <div class="card">
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <label>Nom complet</label>
+            <input type="text" id="name" required placeholder="Votre nom"/>
+            <label>Email</label>
+            <input type="email" id="email" required placeholder="you@example.com"/>
+            <label>Objet</label>
+            <input type="text" id="subject" placeholder="Partenariat, commande, info..."/>
+            <label>Message</label>
+            <textarea id="message" rows="5" placeholder="Votre message..."></textarea>
+            <div style="display:flex;gap:12px;margin-top:12px">
+              <button type="submit" class="btn">Envoyer</button>
+              <button type="button" onclick="saveDraft()" class="brl">Sauvegarder brouillon</button>
+            </div>
+            <div id="formMsg" class="small" style="margin-top:8px;color:var(--muted)"></div>
+          </form>
+        </div>
+        <div>
+          <div class="card">
+            <h4>Infos pratiques</h4>
+            <p class="small"><strong>Email:</strong> contact@agrovitagroup.com</p>
+            <p class="small"><strong>Téléphone:</strong> +223 74 04 76 39</p>
+            <p class="small"><strong>Adresse:</strong> Gouana-Kabale-EST/Kalaban-Coro,Koulikoro — Mali</p>
+            <div style="margin-top:12px;">
+              <div class="small">Réseaux</div>
+              <div class="socials" style="margin-top:8px">
+                <a href="http://facebook.com"  id="fb"><i class="fa-brands fa-facebook"></i></a>
+                <a href="http://Intagram.com" id="ig"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://linkedIn.com" id="in"><i class="fa-brands fa-line"></i></a>
+                <a href="http://youtub.com" id="yt"><i class="fa-brands fa-youtube"></i></a>
+                <a href="http://.Whatsapp.com" id="wa"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="http://twiteer.com" id="tw"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h4>FAQ rapide</h4>
+            <p class="small"><strong>Comment acheter ?</strong> Contactez-nous via le formulaire ou par téléphone.</p>
+            <p class="small"><strong>Partenaires ?</strong> Nous travaillons avec ONG locales et coopératives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <div style="font-weight:700">AGROVITA GROUP</div>
+        <div class="small" data-fr=" Tous droits réservés" data-en="© 2025—All rights reserved"><span id="year">© 2025</span> — Tous droits réservés</div>
+      </div>
+      <div class="small" data-fr="Conçu avec ♥ pour les communautés locales • " data-en="disigned with ♥ for local communities">Conçu avec ♥ pour les communautés locales • <span class="muted" data-fr="Durabilité • Impact • Santé" data-en="Sustainability • Impact • Health">Durabilité • Impact • Santé</span></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMenu(){
+      const links = document.querySelectorAll('nav a');
+      links.forEach(a => { a.style.display = a.style.display === 'inline-block' ? 'none' : 'inline-block' })
+    }
+
+    // Basic contact form handling (demo)
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Simple validation
+      if(!name||!email){
+        showFormMsg('Merci indiquer au moins votre nom et email.' , true);
+        return;
+      }
+
+      // For production: replace this block with an API call (Formspree, Getform, your backend)
+      console.log('Contact form submitted', {name,email,subject,message});
+      showFormMsg('Merci, votre message a été enregistré. Nous vous répondrons bientôt.');
+
+      // clear fields
+      document.getElementById('contactForm').reset();
+    }
+
+    function showFormMsg(msg, err){
+      const el = document.getElementById('formMsg');
+      el.textContent = msg;
+      el.style.color = err ? 'crimson' : 'var(--muted)';
+      setTimeout(()=>{ el.textContent = '' }, 6000);
+    }
+
+    // Save draft locally (useful pour le terrain)
+    function saveDraft(){
+      const data = {
+        name:document.getElementById('name').value,
+        email:document.getElementById('email').value,
+        subject:document.getElementById('subject').value,
+        message:document.getElementById('message').value,
+        ts: new Date().toISOString()
+      }
+      localStorage.setItem('agrovita_contact_draft', JSON.stringify(data));
+      showFormMsg('Brouillon sauvegardé localement.');
+    }
+
+    // Load draft if exists
+    (function loadDraft(){
+      try{
+        const raw = localStorage.getItem('agrovita_contact_draft');
+        if(!raw) return;
+        const d = JSON.parse(raw);
+        if(d.name) document.getElementById('name').value = d.name;
+        if(d.email) document.getElementById('email').value = d.email;
+        if(d.subject) document.getElementById('subject').value = d.subject;
+        if(d.message) document.getElementById('message').value = d.message;
+      }catch(e){console.warn(e)}
+    })();
+  </script>
+  <script>
+// Language Toggle
+  let currentLang = 'fr';
+  function toggleLang() {
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    document.querySelector('.lang-switch').innerText = currentLang === 'fr' ? 'EN' : 'FR';
+    document.querySelectorAll('[data-fr]').forEach(el => {
+      el.innerText = el.getAttribute(`data-${currentLang}`);
+    });
+  }
+
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('formMessage').innerText =
+    currentLang === 'fr'
+      ? 'Message envoyé avec succès ! (Ajoutez votre lien Formspree pour activer l’envoi réel)'
+      : 'Message sent successfully! (Add your Formspree link to activate real sending)';
+  form.reset();
+});
+</script>
+    </body>
+</html>

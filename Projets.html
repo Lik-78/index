@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>AGROVITA GROUP — Cultivons la vie, nourrissons l'avenir</title>
+  <meta name="description" content="AGROVITA GROUP - Agriculture, Apiculture, Élevage, Agroalimentaire, Environnement et Santé. Solutions durables pour les communautés africaines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/Style AgroVita .css">
+    </head>
+    <body>
+        <header>
+            <div class="container nav">
+      <div class="brand">
+        <div class="logo"><a href="index.html" class="lien">AV</a></div>
+        <div>
+          <div style="font-weight:700">AGROVITA GROUP</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.9)" data-fr="Cultivons la vie, nourrissons l’avenir" data-en="Cultivating life, nurturing the future">Cultivons la vie, nourrissons l'avenir</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center">
+        <nav>
+          <a href="Propos.html" data-fr="À propos" data-en="About" >À propos</a>
+          <a href="Activité.html" data-fr="Activités" data-en="Activities" >Activités</a>
+          <a href="Projets.html" data-fr="Projets" data-en="Projects">Projets</a>
+          <a href="Actualite.html" data-fr="Actualité" data-en="Actuality">Actualités</a>
+          <a href="Contacte.html" data-fr="Contact" data-en="Contact" class="cta">Contact</a>
+        </nav>
+        <button class="menu" aria-label="menu" onclick="toggleMenu()" style="margin-left:12px;border:0;background:transparent;color:white">☰</button>
+        <button class="lang-switch" onclick="toggleLang()">EN</button>
+      </div>
+    </div>
+        </header><br>
+        <section id="projects">
+      <h2>Projets & réalisations</h2>
+      <div class="projects">
+        <div class="card">
+          <h4>Projet pilote : Ligne Miel & Jus</h4>
+          <p class="small">Production locale de miel bio et jus de fruits, emballage simple, tests en marché local.</p>
+        </div>
+        <div class="card">
+          <h4>Ferme-école</h4>
+          <p class="small">Ateliers pratiques pour agriculteurs et élèves sur techniques de culture durable.</p>
+        </div>
+        <div class="card">
+          <h4>Sensibilisation sanitaire</h4>
+          <p class="small">Campagne de 3 jours dans un village : hygiène, premiers secours, distribution de kits.</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <div style="font-weight:700">AGROVITA GROUP</div>
+        <div class="small" data-fr=" Tous droits réservés" data-en="© 2025—All rights reserved"><span id="year">© 2025</span> — Tous droits réservés</div>
+      </div>
+      <div class="small" data-fr="Conçu avec ♥ pour les communautés locales • " data-en="disigned with ♥ for local communities">Conçu avec ♥ pour les communautés locales • <span class="muted" data-fr="Durabilité • Impact • Santé" data-en="Sustainability • Impact • Health">Durabilité • Impact • Santé</span></div>
+    </div>
+  </footer>
+  <script>
+  // Language Toggle
+  let currentLang = 'fr';
+  function toggleLang() {
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    document.querySelector('.lang-switch').innerText = currentLang === 'fr' ? 'EN' : 'FR';
+    document.querySelectorAll('[data-fr]').forEach(el => {
+      el.innerText = el.getAttribute(`data-${currentLang}`);
+    });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMenu(){
+      const links = document.querySelectorAll('nav a');
+      links.forEach(a => { a.style.display = a.style.display === 'inline-block' ? 'none' : 'inline-block' })
+    }
+</script>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>AGROVITA GROUP</title>
+  <meta name="description" content="AGROVITA GROUP - Agriculture, Apiculture, Élevage, Agroalimentaire, Environnement et Santé. Solutions durables pour les communautés africaines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="AgroVita Group">
+  <meta property="og:description" content="Cultivons la vie, nourrissons l’avenir.">
+  <meta property="og:image" content="https://example.com/agrovita_og_image.jpg">
+  <meta property="og:url" content="https://agrovitagroup.com">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="CSS/Style AgroVita .css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"><a href="index.html" class="lien">AV</a></div>
+        <div>
+          <div style="font-weight:700" >AGROVITA GROUP</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.9)" data-fr="Cultivons la vie, nourrissons l’avenir" data-en="Cultivating life, nurturing the future">Cultivons la vie, nourrissons l'avenir</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center">
+        <nav>
+          <a href="Propos.html" data-fr="À propos" data-en="About" >À propos</a>
+          <a href="Activité.html" data-fr="Activités" data-en="Activities" >Activités</a>
+          <a href="Projets.html" data-fr="Projets" data-en="Projects">Projets</a>
+          <a href="Actualite.html" data-fr="Actualité" data-en="Actuality">Actualités</a>
+          <a href="Contacte.html" data-fr="Contact" data-en="Contact" class="cta">Contact</a>
+        </nav>
+        <button class="menu" aria-label="menu" onclick="toggleMenu()" style="margin-left:12px;border:0;background:transparent;color:white">☰</button>
+        <button class="lang-switch" onclick="toggleLang()">EN</button>
+      </div>
+    </div>
+  </header><br>
+  <main class="container">
+    <section class="hero">
+      <div class="left">
+        <div class="badge" data-fr="Entreprise Mère • Agriculture & Santé" data-en="Parent Company • Agriculture & Health">Entreprise Mère • Agriculture & Santé</div>
+        <h1 data-fr="AGROVITA GROUP — Solutions durables pour les communautés" data-en="Sustainable solutions for communities.">AGROVITA GROUP — Solutions durables pour les communautés</h1>
+        <p data-fr="Nous combinons agriculture, apiculture, élevage, transformation agroalimentaire, actions sanitaires et protection 
+          de l'environnement pour des projets à fort impact social et économique." data-en="We combine agriculture, beekeeping, livestock, food processing, healthcare action, and environmental protection for projects with strong social and economic impact.">Nous combinons agriculture, apiculture, élevage, transformation agroalimentaire, actions sanitaires et protection 
+          de l'environnement pour des projets à fort impact social et économique.</p>
+
+        <a class="btn" href="Activité.html" data-fr="Découvrir nos activités" data-en="Discover Our Activities">Découvrir nos activités</a>
+
+        <div class="cards" style="margin-top:24px">
+          <div class="card">
+            <strong data-fr="Projet pilote" data-en="Pilot Projects">Projet pilote</strong>
+            <p class="small" data-fr="Lancement d'une gamme locale : miel bio & jus de fruits transformés. Produit visible, faible coût initial." data-en="Launching a local line: organic honey & processed fruit juices.
+Visible products, low initial cost.
+">Lancement d'une gamme locale : miel bio & jus de fruits transformés. Produit visible, faible coût initial.</p>
+          </div>
+          <div class="card">
+            <strong data-fr="Ferme-école" data-en="Farm School">Ferme-école</strong>
+            <p class="small" data-fr="Formation & démonstration : meilleures pratiques agricoles et apicoles pour la communauté." data-en="Training & demonstrations: best agricultural and beekeeping practices for the community.">Formation & démonstration : meilleures pratiques agricoles et apicoles pour la communauté.</p>
+          </div>
+          <div class="card">
+            <strong data-fr="Santé communautaire" data-en="Community Health">Santé communautaire</strong>
+            <p class="small" data-fr="Programmes de sensibilisation sanitaire et kits de premiers secours pour les villages partenaires." data-en="Health awareness programs and first aid kits for partner villages.">Programmes de sensibilisation sanitaire et kits de premiers secours pour les villages partenaires.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:20px">
+        <h3 style="margin:0" data-fr="Contact rapide" data-en="Quick Contact">Contact rapide</h3>
+        <p class="small" data-fr="Pour commandes, partenariats ou bénévolat." data-en="For orders, partnerships, and volunteering.">Pour commandes, partenariats ou bénévolat.</p>
+        <p style="margin:6px 0;font-weight:700">Email: contact@agrovitagroup.example</p>
+        <p style="margin:6px 0;font-weight:700">Tel: +223 74 04 76 39</p>
+        <a class="btn" href="Contacte.html" data-fr="Nous écrire" data-en="Write to us.">Nous écrire</a>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2 data-fr="Actualités & Blog" data-en="News & Blog">Actualités & Blog</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+        <article class="card">
+          <h4 data-fr="Article : L'importance des ruches locales" data-en="Articles: Importance of local hives.">Article : L'importance des ruches locales</h4>
+          <p class="small" data-fr="Bénéfices pour les cultures, économie locale, et biodiversité." data-en="Benefits for crops, local economy, and biodiversity.">Bénéfices pour les cultures, économie locale, et biodiversité.</p>
+        </article>
+        <article class="card">
+          <h4 data-fr="Article : Compostage facile" data-en="Articles:Easy Composting">Article : Compostage facile</h4>
+          <p class="small" data-fr="Guide rapide pour commencer le compost à petite échelle." data-en="Quick guide to start small-scale composting.">Guide rapide pour commencer le compost à petite échelle.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <div style="font-weight:700">AGROVITA GROUP</div>
+        <div class="small" data-fr=" Tous droits réservés" data-en="© 2025—All rights reserved"><span id="year">© 2025 </span> — Tous droits réservés</div>
+      </div>
+      <div class="small" data-fr="Conçu avec ♥ pour les communautés locales • " data-en="disigned with ♥ for local communities">Conçu avec ♥ pour les communautés locales • <span class="muted" data-fr="Durabilité • Impact • Santé" data-en="Sustainability • Impact • Health">Durabilité • Impact • Santé</span></div>
+    </div>
+  </footer>
+  <script>
+  // Language Toggle
+  let currentLang = 'fr';
+  function toggleLang() {
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    document.querySelector('.lang-switch').innerText = currentLang === 'fr' ? 'EN' : 'FR';
+    document.querySelectorAll('[data-fr]').forEach(el => {
+      el.innerText = el.getAttribute(`data-${currentLang}`);
+    });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMenu(){
+      const links = document.querySelectorAll('nav a');
+      links.forEach(a => { a.style.display = a.style.display === 'inline-block' ? 'none' : 'inline-block' })
+    }
+</script>
+</body>
+</html>
